@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
                         one = prefix + one
                     }
 
-                    var result = one.toDouble() - two.toDouble()            //Double(실수)형태로 적용했기때문에 = 기호 누르면 51.0 이런식으로 나옴
+                    var result = one.toDouble() - two.toDouble()            //계산   //Double(실수)형태로 적용했기때문에 = 기호 누르면 51.0 이런식으로 나옴
                     tvInput?.text =removeZeroAfterDot(result.toString())   // 이두줄을 한줄로 바꾸려면 tvInput?.text = (one.toDouble() - two.toDouble()).toString()  으로 바꿀수있음
 
 
@@ -113,13 +113,13 @@ class MainActivity : AppCompatActivity() {
                 }else if(tvValue.contains("+")){
 
                     val splitValue = tvValue.split("+") // +로 문자 나누기
-                    // ex) 99-1
+                    // ex) 99+1
                     var one = splitValue[0] //ex) 99
                     var two = splitValue[1] //ex) 1
 
                     // prefix변수가 비어있지않으면 if문 실행
                     if(prefix.isNotEmpty()){
-                        // 첫번째 입력값은 -가 될수있기 때문에, 첫번째 입력값에는 -붙여줌
+                        // 첫번째 입력값은 +가 될수있기 때문에, 첫번째 입력값에는 +붙여줌
                         one = prefix + one
                     }
 
@@ -131,13 +131,13 @@ class MainActivity : AppCompatActivity() {
                 }else if(tvValue.contains("/")){
 
                     val splitValue = tvValue.split("/") // /로 문자 나누기
-                    // ex) 99-1
+                    // ex) 99/1
                     var one = splitValue[0] //ex) 99
                     var two = splitValue[1] //ex) 1
 
                     // prefix변수가 비어있지않으면 if문 실행
                     if(prefix.isNotEmpty()){
-                        // 첫번째 입력값은 -가 될수있기 때문에, 첫번째 입력값에는 -붙여줌
+                        // 첫번째 입력값은 / 가 될수있기 때문에, 첫번째 입력값에는 /붙여줌
                         one = prefix + one
                     }
 
@@ -149,13 +149,13 @@ class MainActivity : AppCompatActivity() {
                 }else if(tvValue.contains("*")){
 
                     val splitValue = tvValue.split("*") // *로 문자 나누기
-                    // ex) 99-1
+                    // ex) 99*1
                     var one = splitValue[0] //ex) 99
                     var two = splitValue[1] //ex) 1
 
                     // prefix변수가 비어있지않으면 if문 실행
                     if(prefix.isNotEmpty()){
-                        // 첫번째 입력값은 -가 될수있기 때문에, 첫번째 입력값에는 -붙여줌
+                        // 첫번째 입력값은 *가 될수있기 때문에, 첫번째 입력값에는 *붙여줌
                         one = prefix + one
                     }
 
